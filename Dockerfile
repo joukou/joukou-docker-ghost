@@ -10,7 +10,7 @@ FROM quay.io/joukou/nodejs
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://ghost.org/zip/ghost-latest.zip && \
+  curl -LO https://ghost.org/zip/ghost-latest.zip && \
   unzip ghost-latest.zip -d /ghost && \
   rm -f ghost-latest.zip && \
   cd /ghost && \
