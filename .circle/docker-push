@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ $CIRCLE_BRANCH = "master" ] || [ $CIRCLE_BRANCH = "develop" ]; then
+  docker push $DOCKER_IMAGE_NAME:`docker-tag-name`
+else
+  printf "Not pushing to Docker registry from branch ${CIRCLE_BRANCH}\n"
+fi

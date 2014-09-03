@@ -1,11 +1,11 @@
 #
 # Ghost Dockerfile
 #
-# https://github.com/dockerfile/ghost
+# Derived from https://github.com/dockerfile/ghost under the terms of the MIT
+# license.
 #
 
-# Pull base image.
-FROM dockerfile/nodejs
+FROM quay.io/joukou/nodejs
 
 # Install Ghost
 RUN \
